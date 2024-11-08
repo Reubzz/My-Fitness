@@ -20,7 +20,7 @@ const authSys = require('authjs')({
         role: true,
         createdAt: true
     },
-    loginExpiryIn: 1000,
+    loginExpiryIn: process.env.loginMaxAge,
     uniqueLoginField: "email"
 });
 
