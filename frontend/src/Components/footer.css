@@ -1,0 +1,40 @@
+footer {
+    width: 100%;
+    height: max-content;
+    padding: 40px 40px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    background-color: #e9e9e9;
+
+    .left-conatainer {
+        width: 100%;
+        .logo-container {
+            width: 100%;
+            img {
+                width: 50%;
+            }
+        }
+        
+    }
+    .right-conatainer {
+        width: 100%;
+        h3 {
+            background-color: transparent;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        ul {
+            list-style: none;
+            text-align: center;
+            li {
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+

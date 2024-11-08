@@ -1,0 +1,52 @@
+.bg {
+  height: 100px;
+  background-color:#e9e9e9 !important;
+}
+nav {
+  height: 100%;
+}
+
+.container-fluid{
+  height: 100%;
+  width: 100%;
+}
+.navbar-brand {
+  height: 100%;
+
+}
+b{
+    color:black;
+    font-size:20px;
+  }
+  
+
+u
+{
+  color:#8A2BE2;
+  font-size:30px;
+}
+.login{
+
+    font-size:30px;
+    color:blue;
+    text-decoration: none;
+  
+}
+img {
+  height: 100%;
+}
+#navbarNav {
+  justify-content: space-between;
+  align-items: center;
+}
+/* body{
+
+    background-image: url(./Assets/loginbg1.avif);
+    background-repeat: no-repeat;
+    background-size:100%;
+  
+  
+  
+  }
+   */
+ 

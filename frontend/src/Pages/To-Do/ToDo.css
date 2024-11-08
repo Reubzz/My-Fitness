@@ -1,0 +1,114 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url("https://wallpaperaccess.com/full/1191895.jpg"); /* Background image */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.todo-container {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Semi-transparent background for the container */
+  padding: 30px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 36px;
+  color: #f8f6f6;
+  margin-bottom: 20px;
+}
+
+.input-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-section input {
+  padding: 10px;
+  width: 45%;
+  border-radius: 5px;
+  border: none;
+  margin-right: 10px;
+}
+
+.input-section button {
+  padding: 10px 20px;
+  background-color: #0c76e7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-section button:hover {
+  background-color: #0056b3;
+}
+
+.task-category {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #f8f6f6;
+  margin-bottom: 15px;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 123, 255, 0.5);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.completed {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.incomplete {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+}
+
+.task-info img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.task-actions button {
+  padding: 5px 10px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.task-actions button:hover {
+  background-color: #e67e22;
+}

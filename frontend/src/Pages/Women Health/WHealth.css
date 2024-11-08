@@ -1,0 +1,194 @@
+/* App.css */
+/* body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('https://th.bing.com/th/id/OIP.Xw8l23BiFRxXwdUUITvMFAHaEK?rs=1&pid=ImgDetMain');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
+  
+  .WHealth {
+    text-align: center;
+    width: 100%;  /* Ensure it takes full width */
+    height: 100%; /* Ensure it takes full height */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* The content container */
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%; /* Take full height of the screen */
+    padding: 0;
+  }
+  
+  .intro {
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .cycle-tracker,
+  .cycle-history,
+  .nutrition-tips,
+  .yoga-exercises,
+  .health-goals {
+    width: 100%; /* Ensure sections take up full width */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);  /* Light background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  input,
+  button,
+  label {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Nutrition Tips styling */
+  .nutrition-tips {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #faf9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nutrition-tips h2 {
+    color: #6c0606;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);    /* 2 rows */
+    gap: 20px;                             /* space between grid items */
+    margin-top: 20px;
+  }
+  
+  .nutrition-item {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nutrition-item h3 {
+    color: #413d3d;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+  }
+  
+  .nutrition-item ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .nutrition-item li {
+    font-size: 1em;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .nutrition-item img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nutrition-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Yoga Exercises styling */
+  .yoga-exercises {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .yoga-exercises h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #632020;
+  }
+  
+  .yoga-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal-width columns */
+    gap: 20px; /* Adds space between the grid items */
+    padding: 0 20px;
+  }
+  
+  .yoga-item {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for each item */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .yoga-item img {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Set a max-width to ensure images don't get too large */
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .yoga-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #062444;
+  }
+  
+  .yoga-item p {
+    font-size: 1em;
+    color: #333;
+  }
+  
+  /* Responsive Design for smaller screens */
+  @media (max-width: 768px) {
+    .yoga-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    }
+    
+    .nutrition-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .yoga-grid,
+    .nutrition-grid {
+      grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+  }
+  
