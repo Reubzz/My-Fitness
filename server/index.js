@@ -33,13 +33,16 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }))
 
 app.use(cors({
     origin: process.env.FRONTEND_URL,
-    credentials: true
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', '*'],
 }));
 
 // set headers for you to be able to set cookies on the browser
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", process.env.FRONTEND_URL);
     res.header("Access-Control-Allow-Headers", "*");
+    res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE");
     res.header("Access-Control-Allow-Credentials", "true");
     next();
 });
@@ -55,7 +58,11 @@ app.post("/login", (req, res) => {
         Schema: usersDB,
         response: res
     }).then((data) => {
-        res.redirect('/')
+        res.status(200).json({
+            code: 200,
+            message: "Login Success",
+            data: data
+        })
     }).catch((err) => {
         res.status(400).json({
             code: 400,
@@ -77,7 +84,11 @@ app.post("/register", (req, res) => {
         Schema: usersDB,
         response: res
     }).then((data) => {
-        res.send("The newly registered user's name is = " + data.userdata.username)
+        res.status(200).json({
+            code: 200,
+            message: "Login Success",
+            data: data
+        })
     }).catch((err) => {
         res.status(400).json({
             code: 400,

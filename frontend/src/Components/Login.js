@@ -17,8 +17,10 @@ const Login = () => {
             : { name, email, password };
 
         try {
-            const response = await axios.post(`http://localhost/${action.toLowerCase()}`, data);
-            console.log("Response from backend:", response.data);
+            const response = await axios.post(`/${action.toLowerCase()}`, data);
+            if(response.data.data.code === 200) {
+                window.history.go(-1)
+            }
         } catch (error) {
             console.error("Error sending data to backend:", error);
         }
