@@ -42,39 +42,39 @@ function BMI() {
 
   return (
     <>
-    <div className='title'>
-    <h1><center>BMI Module</center></h1>
-    </div>
- 
-    <div className='mainContainer'>
-      <h1><b><u>BMI Calculator</u></b></h1>
-      <div>
-        <label>Weight (kg):</label>
-        <input
-          type="number"
-          value={weight}
-          onChange={(e) => setWeight(e.target.value)}
-        />
-      </div>
-      <div>
-        <label>Height (cm):</label>
-        <input
-          type="number"
-          value={height}
-          onChange={(e) => setHeight(e.target.value)}
-        />
-      </div>
-     
-
-     
-      <button onClick={calculateBMI}>Calculate BMI</button>
-      {bmi && (
-        <div className='result'>
-          <p>Your BMI is: {bmi}</p>
-          <p>Your weight status is: {weightStatus}</p>
+      <section id="banner-title-container">
+        <div class="title">BMI Calculator</div>
+        {/* <div class="sub-title"></div> */}
+      </section>
+  
+      <div className='mainContainer'>
+        <div>
+          <label>Weight (kg):</label>
+          <input
+            type="number"
+            value={weight}
+            onChange={(e) => setWeight(e.target.value)}
+          />
         </div>
-      )}
-    </div>
+        <div>
+          <label>Height (cm):</label>
+          <input
+            type="number"
+            value={height}
+            onChange={(e) => setHeight(e.target.value)}
+          />
+        </div>
+      
+
+      
+        <button onClick={calculateBMI}>Calculate BMI</button>
+        {bmi && (
+          <div className='result'>
+            <p>Your BMI is: {bmi}</p>
+            <p>Your weight status is: {weightStatus}</p>
+          </div>
+        )}
+      </div>
     </>
   );
 }

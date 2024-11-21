@@ -19,24 +19,27 @@ const WHealth = () => {
   };
 
   return (
-    <div className="WHealth">
-      <h1>Women's Health Tracker</h1>
-      <div className="intro">
-        <p>
-          The menstrual cycle is a natural process that occurs monthly for
-          women. It involves the shedding of the uterine lining and is
-          characterized by hormonal changes. Tracking your menstrual cycle is
-          essential for understanding your body's rhythms, managing health,
-          and optimizing your nutrition, yoga, and lifestyle choices.
-        </p>
-      </div>
+    <>
+      <section id="banner-title-container">
+        <div class="title">Women's Health Tracker</div>
+        <div class="sub-title">The menstrual cycle is a natural process that occurs monthly for
+            women. It involves the shedding of the uterine lining and is
+            characterized by hormonal changes. Tracking your menstrual cycle is
+            essential for understanding your body's rhythms, managing health,
+            and optimizing your nutrition, yoga, and lifestyle choices.</div>
+      </section>
+      <div className="WHealth">
+        
+        
 
-      <CycleTracker addCycle={addCycle} />
-      <CycleHistory cycles={cycles} />
-      <NutritionTips />
-      <YogaExercises />
-      <HealthGoals addGoal={addGoal} goals={goals} />
-    </div>
+        <CycleTracker addCycle={addCycle} />
+        <CycleHistory cycles={cycles} />
+        <NutritionTips />
+        <YogaExercises />
+        <HealthGoals addGoal={addGoal} goals={goals} />
+      </div>
+    
+    </>
   );
 }
 

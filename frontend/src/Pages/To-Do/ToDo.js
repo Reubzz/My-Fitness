@@ -42,71 +42,76 @@ function ToDo () {
   const upcomingTasks = tasks.filter(task => task.date > today);
 
   return (
-    <div className="App">
-      <div className="todo-container">
-        <h1>To-Do List</h1>
-        <div className="input-section">
-          <input
-            type="text"
-            value={newTask}
-            onChange={(e) => setNewTask(e.target.value)}
-            placeholder="Enter a new task"
-          />
-          <input
-            type="date"
-            value={taskDate}
-            onChange={(e) => setTaskDate(e.target.value)}
-          />
-          <button onClick={handleAddTask}>Add Task</button>
-        </div>
-
-        <div className="task-category">
-          <h2>Today's Tasks</h2>
-          <div className="task-list">
-            {todaysTasks.length === 0 ? (
-              <p>No tasks for today!</p>
-            ) : (
-              todaysTasks.map(task => (
-                <div key={task.id} className={`task ${task.completed ? 'completed' : 'incomplete'}`}>
-                  <div className="task-info">
-                    <img src={task.image} alt="Task" className="task-image" />
-                    <p>{task.text}</p>
-                  </div>
-                  <div className="task-actions">
-                    <button onClick={() => toggleTaskCompletion(task.id)}>
-                      {task.completed ? 'Mark Incomplete' : 'Mark Complete'}
-                    </button>
-                    <button onClick={() => deleteTask(task.id)}>Delete</button>
-                  </div>
-                </div>
-              ))
-            )}
+    <>
+      <section id="banner-title-container">
+        <div class="title">To-Do List</div>
+        {/* <div class="sub-title"></div> */}
+      </section>
+      <div className="App">
+        <div className="todo-container">
+          <div className="input-section">
+            <input
+              type="text"
+              value={newTask}
+              onChange={(e) => setNewTask(e.target.value)}
+              placeholder="Enter a new task"
+            />
+            <input
+              type="date"
+              value={taskDate}
+              onChange={(e) => setTaskDate(e.target.value)}
+            />
+            <button onClick={handleAddTask}>Add Task</button>
           </div>
 
-          <h2>Upcoming Tasks</h2>
-          <div className="task-list">
-            {upcomingTasks.length === 0 ? (
-              <p>No upcoming tasks!</p>
-            ) : (
-              upcomingTasks.map(task => (
-                <div key={task.id} className={`task ${task.completed ? 'completed' : 'incomplete'}`}>
-                  <div className="task-info">
-                    <img src={task.image} alt="Task" className="task-image" />
-                    <p>{task.text}</p>
+          <div className="task-category">
+            <h2>Today's Tasks</h2>
+            <div className="task-list">
+              {todaysTasks.length === 0 ? (
+                <p>No tasks for today!</p>
+              ) : (
+                todaysTasks.map(task => (
+                  <div key={task.id} className={`task ${task.completed ? 'completed' : 'incomplete'}`}>
+                    <div className="task-info">
+                      <img src={task.image} alt="Task" className="task-image" />
+                      <p>{task.text}</p>
+                    </div>
+                    <div className="task-actions">
+                      <button onClick={() => toggleTaskCompletion(task.id)}>
+                        {task.completed ? 'Mark Incomplete' : 'Mark Complete'}
+                      </button>
+                      <button onClick={() => deleteTask(task.id)}>Delete</button>
+                    </div>
                   </div>
-                  <div className="task-actions">
-                    <button onClick={() => toggleTaskCompletion(task.id)}>
-                      {task.completed ? 'Mark Incomplete' : 'Mark Complete'}
-                    </button>
-                    <button onClick={() => deleteTask(task.id)}>Delete</button>
+                ))
+              )}
+            </div>
+
+            <h2>Upcoming Tasks</h2>
+            <div className="task-list">
+              {upcomingTasks.length === 0 ? (
+                <p>No upcoming tasks!</p>
+              ) : (
+                upcomingTasks.map(task => (
+                  <div key={task.id} className={`task ${task.completed ? 'completed' : 'incomplete'}`}>
+                    <div className="task-info">
+                      <img src={task.image} alt="Task" className="task-image" />
+                      <p>{task.text}</p>
+                    </div>
+                    <div className="task-actions">
+                      <button onClick={() => toggleTaskCompletion(task.id)}>
+                        {task.completed ? 'Mark Incomplete' : 'Mark Complete'}
+                      </button>
+                      <button onClick={() => deleteTask(task.id)}>Delete</button>
+                    </div>
                   </div>
-                </div>
-              ))
-            )}
+                ))
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

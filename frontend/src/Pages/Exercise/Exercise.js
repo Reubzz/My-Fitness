@@ -30,7 +30,7 @@ const Exercise = () => {
     <>
       <section id="banner-title-container">
         <div class="title">Exercise Guide</div>
-        {/* <div class="sub-title">All Cars available for Renting</div> */}
+        {/* <div class="sub-title"></div> */}
       </section>
   
       <div className="exercise-container">

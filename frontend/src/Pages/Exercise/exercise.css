@@ -32,6 +32,14 @@ body {
     font-weight: 700;
     word-wrap: break-word;
   }
+  .sub-title {
+    align-self: stretch;
+    color: #232323;
+    font-size: 1.2rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+  }
 }
 h1 {
   text-align: center;
