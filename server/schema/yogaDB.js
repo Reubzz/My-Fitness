@@ -1,7 +1,7 @@
 const mongoose = require('../db.js')
 
 const model = mongoose.MAIN_DB.model(
-    'exercise',
+    'yoga',
     new mongoose.Schema({
             name: { type: String, required: true },
             description: { type: String, required: true },
