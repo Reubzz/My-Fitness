@@ -1,7 +1,6 @@
 // src/App.js
 import React, { useState, useEffect } from "react";
 import { TailSpin } from "react-loader-spinner";
-// import exercises from "./exercises.js";
 import './exercise.css'; // Import the CSS file
 import axios from '../../utils/axios.js';
 
@@ -73,31 +72,36 @@ const Exercise = () => {
 			</section>
 
 			<div className="exercise-container">
-				<div class="searchbar">
-					<input type="search" name="search" onKeyUp={(e) => setSearchedBodyPart(e.target.value)} id="searchInput" placeholder="Search for a exercise..." />
-					<button class="search-btn" type="submit">
-						<i class="fas fa-search searchIcon"></i>
-					</button>
+				<div className="exercise-top-nav-bar">
+					<div class="exercise-searchbar">
+						<input className="search-bar" type="search" name="search" onKeyUp={(e) => setSearchedBodyPart(e.target.value)} id="searchInput" placeholder="Search for a exercise..." />
+						<button class="search-btn" type="submit">
+							<i class="fas fa-search searchIcon"></i>
+						</button>
+					</div>
+
+					<select className="exercise-select" onChange={(e) => setSelectedBodyPart(e.target.value)}>
+						<option value="All">All</option>
+						<option value="Chest">Chest</option>
+						<option value="Legs">Legs</option>
+						<option value="Back">Back</option>
+						<option value="Shoulders">Shoulders</option>
+						<option value="Biceps">Biceps</option>
+						<option value="Triceps">Triceps</option>
+
+
+						{/* Add more body parts as needed */}
+					</select>
 				</div>
 
-				<select onChange={(e) => setSelectedBodyPart(e.target.value)}>
-					<option value="All">All</option>
-					<option value="Chest">Chest</option>
-					<option value="Legs">Legs</option>
-					<option value="Back">Back</option>
-					<option value="Shoulders">Shoulders</option>
-					<option value="Biceps">Biceps</option>
-					<option value="Triceps">Triceps</option>
-
-
-					{/* Add more body parts as needed */}
-				</select>
-
-				<div style={{ marginTop: "20px", display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+				<div className="exercise-wrapper" style={{  }}>
 					{filterExercises().map(exercise => (
 						<div className="exercise-card" key={exercise.id}>
 							<h2>{exercise.name}</h2>
-							<img src={exercise.imageUrl} alt={exercise.name} />
+							<div className="exercise-image-container">
+								<img src={exercise.imageUrl} alt={exercise.name} />
+
+							</div>
 							<p>Body Part: {exercise.bodyPart}</p>
 							<a href={exercise.videoUrl} target="_blank" rel="noopener noreferrer">
 								Watch Video

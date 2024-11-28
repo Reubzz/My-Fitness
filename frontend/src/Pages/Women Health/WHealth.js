@@ -4,11 +4,13 @@ import CycleHistory from "./components/CycleHistory";
 import NutritionTips from "./components/NutritionTips";
 import YogaExercises from "./components/YogaExercises";
 import HealthGoals from "./components/HealthGoals";
+import SymptomTracker from "./components/SymptomTracker";
 import "./WHealth.css";
 
 const WHealth = () => {
   const [cycles, setCycles] = useState([]);
   const [goals, setGoals] = useState([]);
+  const [symptoms, setSymptoms] = useState([]);
 
   const addCycle = (cycleData) => {
     setCycles([...cycles, cycleData]);
@@ -18,6 +20,9 @@ const WHealth = () => {
     setGoals([...goals, goal]);
   };
 
+  const addSymptom = (symptom) => {
+    setSymptoms([...symptoms, symptom]);
+  }
   return (
     <>
       <section id="banner-title-container">
@@ -29,14 +34,12 @@ const WHealth = () => {
             and optimizing your nutrition, yoga, and lifestyle choices.</div>
       </section>
       <div className="WHealth">
-        
-        
-
         <CycleTracker addCycle={addCycle} />
         <CycleHistory cycles={cycles} />
         <NutritionTips />
         <YogaExercises />
         <HealthGoals addGoal={addGoal} goals={goals} />
+        <SymptomTracker addSymptom={addSymptom} symptoms={symptoms}/>
       </div>
     
     </>

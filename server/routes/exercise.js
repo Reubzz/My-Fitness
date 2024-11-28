@@ -26,7 +26,7 @@ router.get("/", async (req, res) => {
 })
 router.post("/", async (req, res) => {
     try {
-        data = {
+        rawData = {
             name: req.body.name,
             description: req.body.description,
             bodyPart: req.body.bodyPart,
@@ -34,20 +34,21 @@ router.post("/", async (req, res) => {
             videoUrl: req.body.videoUrl,
             type: req.body.type,
             duration: req.body.duration
-        };
-        await exerciseDB.create(data);
-
-        res.status(200).json({
-            code: 200,
-            message: "Exercie Data added to Database.",
-            data: data
+        }
+        await exerciseDB.create(rawData).then((data) => {
+            res.status(200).json({
+                code: 200,
+                message: "Exercise Data added to Database.",
+                data: data
+            })
         })
-    } catch (e) {
-        console.log(e)
+    } catch (err) {
+        console.log(err)
         res.status(400).json({
             code: 400, 
-            message: "Error adding Exercie Data to Database.",
-            data: data
+            message: "Error adding Exercise Data to Database.",
+            data: rawData,
+            error: err
         })
     }
 })

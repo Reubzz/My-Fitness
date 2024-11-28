@@ -47,9 +47,9 @@ function BMI() {
         {/* <div class="sub-title"></div> */}
       </section>
   
-      <div className='mainContainer'>
+      <div className='bmi-mainContainer'>
         <div>
-          <label>Weight (kg):</label>
+          <label>Weight (kg)</label>
           <input
             type="number"
             value={weight}
@@ -57,7 +57,7 @@ function BMI() {
           />
         </div>
         <div>
-          <label>Height (cm):</label>
+          <label>Height (cm)</label>
           <input
             type="number"
             value={height}

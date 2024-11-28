@@ -27,43 +27,47 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
     try {
-        data = {
+        rawData = {
             name: req.body.name,
             description: req.body.description,
-            imageUrl: req.body.image,
-            videoUrl: req.body.video,
+            imageUrl: req.body.imageUrl,
+            videoUrl: req.body.imageUrl,
             type: req.body.type,
             duration: req.body.duration
         }
-        await yogaDB.create(data);
-        res.status(200).json({
-            code: 200,
-            message: "Added Yoga exercise",
-            data: data
+        await yogaDB.create(rawData).then((data) => {
+            res.status(200).json({
+                code: 200,
+                message: "Added Yoga exercise",
+                data: data
+            })
         })
     } catch (err) {
         console.error(err);
         res.status(400).json({
             code: 400,
             message: "Error adding yoga exercise",
-            data: data
+            data: rawData,
+            error: err
         })
     }
 })
 router.delete("/", async (req, res) => {
     try {
-        await yogaDB.deleteOne({ _id: req.body._id });
-        res.status(200).json({
-            code: 200,
-            message: "Yoga Data deleted to Database.",
-            data: req.body._id
-        })
-    } catch (e) {
-        console.log(e)
+        await yogaDB.deleteOne({ _id: req.body._id }).then((d) => {
+            res.status(200).json({
+                code: 200,
+                message: "Yoga Data deleted to Database.",
+                data: d
+            })
+        });
+    } catch (err) {
+        console.log(err)
         res.status(400).json({
             code: 400, 
             message: "Error deleting Yoga Data from Database.",
-            data: req.body._id
+            data: req.body._id,
+            error: err
         })
     }
 })

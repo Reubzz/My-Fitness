@@ -72,6 +72,22 @@ router.post("/register", (req, res) => {
     })
 })
 
+router.get("/status", (req, res) => {
+	if (req.cookies.jwt) {
+		// Optionally verify the token here
+		res.json({ 
+            code: 200,
+            message: "User is logged in" 
+        });
+	} else {
+		res.json({ 
+            code: 401,
+            message: "No User logged in"
+        });
+	}
+});
+
+
 router.get('/logout', (req, res) => {
     authSys.logout({
         response: res

@@ -1,52 +1,65 @@
-.bg {
-  height: 100px;
-  background-color:#e9e9e9 !important;
-}
-nav {
-  height: 100%;
+.navigation-bar {
+	height: 100px;
+	background-color: #e9e9e9 !important;
+	nav {
+		height: 100%;
+	}
+	
+	.container-fluid {
+		height: 100%;
+		width: 100%;
+		padding: 0px 50px;
+	}
+	
+	.navbar-brand {
+		height: 100%;
+	}
+	
+	b {
+		color: black;
+		font-size: 20px;
+	}
+	
+	u {
+		color: #8a2be2;
+		font-size: 30px;
+	}
+	
+	.login {
+		font-size: 30px;
+		color: #252525;
+		text-decoration: none;
+		background-color: var(--blue);
+		padding: 10px 25px;
+		border-radius: 10px;
+		display: flex;
+		justify-content: center;
+		transition: border-radius 0.3s;
+		align-items: center;
+	}
+	
+	.login:hover {
+		background-color: var(--blueDarker);
+		border-radius: 50px;
+	}
+	
+	img {
+		height: 100%;
+	}
+	
+	#navbarNav {
+		justify-content: space-between;
+		align-items: center;
+		.navbar-nav {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.nav-item {
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
 }
 
-.container-fluid{
-  height: 100%;
-  width: 100%;
-}
-.navbar-brand {
-  height: 100%;
-
-}
-b{
-    color:black;
-    font-size:20px;
-  }
-  
-
-u
-{
-  color:#8A2BE2;
-  font-size:30px;
-}
-.login{
-
-    font-size:30px;
-    color:blue;
-    text-decoration: none;
-  
-}
-img {
-  height: 100%;
-}
-#navbarNav {
-  justify-content: space-between;
-  align-items: center;
-}
-/* body{
-
-    background-image: url(./Assets/loginbg1.avif);
-    background-repeat: no-repeat;
-    background-size:100%;
-  
-  
-  
-  }
-   */
- 

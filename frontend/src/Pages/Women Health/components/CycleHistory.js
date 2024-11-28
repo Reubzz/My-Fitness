@@ -3,7 +3,7 @@ import React from "react";
 function CycleHistory({ cycles }) {
   return (
     <div className="cycle-history">
-      <h2>Your Cycle History</h2>
+      <h2 className="Whealth-title">Your Cycle History</h2>
       {cycles.length === 0 ? (
         <p>No cycles recorded yet.</p>
       ) : (

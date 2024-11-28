@@ -4,63 +4,64 @@ import './Calorie.css';
 
 
 const Calorie = () => {
-  const [foodItems, setFoodItems] = useState([]);
-  const [foodName, setFoodName] = useState('');
-  const [calories, setCalories] = useState('');
-  const [totalCalories, setTotalCalories] = useState(0);
+	const [foodItems, setFoodItems] = useState([]);
+	const [foodName, setFoodName] = useState('');
+	const [calories, setCalories] = useState('');
+	const [totalCalories, setTotalCalories] = useState(0);
 
-  const handleAddFood = () => {
-    if (foodName && calories) {
-      const newFoodItem = { name: foodName, calories: parseInt(calories) };
-      setFoodItems([...foodItems, newFoodItem]);
-      setTotalCalories(totalCalories + newFoodItem.calories);
-      setFoodName('');
-      setCalories('');
-    }
-  };
+	const handleAddFood = () => {
+		if (foodName && calories) {
+			const newFoodItem = { name: foodName, calories: parseInt(calories) };
+			setFoodItems([...foodItems, newFoodItem]);
+			setTotalCalories(totalCalories + newFoodItem.calories);
+			setFoodName('');
+			setCalories('');
+		}
+	};
 
-  return (
-    <>
-    
-      <section id="banner-title-container">
-          <div class="title">Calorie Tracker</div>
-          {/* <div class="sub-title"></div> */}
-        </section>
-      <div className='Calorie-overall'>
-        <div className="calorie-tracker">
-          
-          <div>
-            <input
-              type="text"
-              placeholder="Food Name"
-              value={foodName}
-              onChange={(e) => setFoodName(e.target.value)}
-            />
-            <input
-              type="number"
-              placeholder="Calories"
-              value={calories}
-              onChange={(e) => setCalories(e.target.value)}
-            />
-            <button onClick={handleAddFood}>Add Food</button>
-          </div>
+	return (
+		<>
 
-          <div className="total-calories">
-            <h2>Total Calories: {totalCalories}</h2>
-          </div>
+			<section id="banner-title-container">
+				<div class="title">Calorie Tracker</div>
+				{/* <div class="sub-title"></div> */}
+			</section>
+			<div className='Calorie-overall'>
+				<div className="calorie-tracker">
 
-          <h3>Food List:</h3>
-          <ul>
-            {foodItems.map((item, index) => (
-              <li key={index}>
-                {item.name} - {item.calories} Calories
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </>
-  );
+					<div>
+						<input
+							type="text"
+							placeholder="Food Name"
+							value={foodName}
+							onChange={(e) => setFoodName(e.target.value)}
+						/>
+						<input
+							type="number"
+							placeholder="Calories"
+							value={calories}
+							onChange={(e) => setCalories(e.target.value)}
+						/>
+						<button onClick={handleAddFood}>Add Food</button>
+					</div>
+					<hr></hr>
+
+					<div className="total-calories">
+						<h2>Total Calories: {totalCalories}</h2>
+					</div>
+					<hr></hr>
+					<h3>Food List:</h3>
+					<ul>
+						{foodItems.map((item, index) => (
+							<li key={index}>
+								{item.name} - {item.calories} Calories
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+		</>
+	);
 };
 
 

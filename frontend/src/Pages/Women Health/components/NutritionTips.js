@@ -4,7 +4,7 @@ import React from "react";
 function NutritionTips() {
   return (
     <div className="nutrition-tips">
-      <h2>Nutrition Tips During Your Menstrual Cycle</h2>
+      <h2 className="Whealth-title">Nutrition Tips During Your Menstrual Cycle</h2>
 
       <div className="nutrition-grid">
         {/* Vitamin C Rich Foods */}

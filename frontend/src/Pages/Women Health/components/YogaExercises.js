@@ -60,7 +60,7 @@ const YogaExercises = () => {
 
   return (
     <div className="yoga-exercises">
-      <h2>Yoga Poses for Menstrual Pain Relief</h2>
+      <h2 className="Whealth-title">Yoga Poses for Menstrual Pain Relief</h2>
       <div className="yoga-grid">
         {yogaPoses.map((pose) => (
           <div className="yoga-item" key={pose.id}>

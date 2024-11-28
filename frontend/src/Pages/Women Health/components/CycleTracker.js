@@ -33,8 +33,8 @@ function CycleTracker({ addCycle }) {
 
   return (
     <div className="cycle-tracker">
-      <h2>Menstrual Cycle Tracker</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className="Whealth-title">Menstrual Cycle Tracker</h2>
+      <form className="cycle-tracker-form" onSubmit={handleSubmit}>
         <div>
           <label>Start Date of Last Period:</label>
           <input

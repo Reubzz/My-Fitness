@@ -11,7 +11,7 @@ function HealthGoals({ addGoal, goals }) {
 
   return (
     <div className="health-goals">
-      <h2>Health Goals</h2>
+      <h2 className="Whealth-title">Health Goals</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

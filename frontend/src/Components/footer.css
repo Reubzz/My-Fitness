@@ -19,6 +19,7 @@ footer {
     }
     .right-conatainer {
         width: 100%;
+        text-align: center;
         h3 {
             background-color: transparent;
             font-size: 2rem;
