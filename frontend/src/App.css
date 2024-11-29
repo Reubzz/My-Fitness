@@ -19,6 +19,7 @@ body {
 	background-color: #ccc;
 	background-position: center;
 	background-size: cover;
+	background-repeat: no-repeat;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
@@ -508,11 +509,13 @@ body {
 		border: none;
 		border-radius: 5px;
 		cursor: pointer;
-		transition: background-color 0.3s;
+		transition: border-radius 0.3s;
+		text-decoration: none;
 	}
 
 	.cta-button:hover {
-		background-color: var(--blueFadded);
+		background-color: var(--blueDarker);
+		border-radius: 50px;
 	}
 }
 

@@ -124,9 +124,9 @@ function App() {
 						<div className="banner-content">
 							<h1>Achieve Your Fitness Goals Today!!</h1>
 							<p>
-							Sign up now and <span className="highlight">start</span> on your new journey!
+							Sign up now and <span className="highlight">Start</span> on your new journey!
 							</p>
-							<button className="cta-button">Join Now</button>
+							<a href="/login" className="cta-button">Join Now</a>
 						</div>
 					</div>
 				</section>
