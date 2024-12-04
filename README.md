@@ -19,11 +19,28 @@ In Partial Fullfillment of <b><u>Master Of Computer Application (Science)</u></b
 <h2>Run this project: </h2>
 
 - **Frontend**<br>
-```cd frontend```<br>
-```npm i```<br>
-```npm start```<br>
+    ```console
+    cd frontend
+    ```
+
+    ```console
+    npm i
+    ```
+
+    ```console
+    npm start
+    ```
+
 
 - **Server**<br>
-```cd server```<br>
-```npm i```<br>
-```npm start```<br>
+    ```console
+    cd server
+    ```
+
+    ```console
+    npm i
+    ```
+
+    ```console
+    npm start
+    ```
